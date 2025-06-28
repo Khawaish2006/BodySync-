@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-4">Smart Workout Recommender</h2>
+
+{% if result %}
+  <div class="alert alert-success fs-4">
+    <strong>{{ result }}</strong> is the best workout for you today! 💪
+  </div>
+{% endif %}
+
+<form method="POST" class="row g-3">
+  <div class="col-md-3">
+    <label class="form-label">Age (years)</label>
+    <input name="age" type="number" min="10" max="100" step="1"
+           class="form-control" value="{{ form_data.age if form_data else '' }}" required>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">BMI</label>
+    <input name="bmi" type="number" min="10" max="60" step="0.1"
+           class="form-control" value="{{ form_data.bmi if form_data else '' }}" required>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Exercise days / week</label>
+    <input name="exercise_days" type="number" min="0" max="7" step="1"
+           class="form-control" value="{{ form_data.exercise_days if form_data else '' }}" required>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Diet Quality (0-100)</label>
+    <input name="diet_quality" type="number" min="0" max="100" step="1"
+           class="form-control" value="{{ form_data.diet_quality if form_data else '' }}" required>
+  </div>
+  <div class="col-md-3">
+  <label class="form-label">Sleep Hours / night</label>
+  <input name="sleep_hours" type="number" min="0" max="12" step="0.1"
+         class="form-control" required>
+ </div>
+
+<div class="col-md-3">
+  <label class="form-label">Smoking Status (0 = No, 1 = Yes)</label>
+  <input name="smoking_status" type="number" min="0" max="1" step="1"
+         class="form-control" required>
+</div>
+<div class="col-md-3">
+  <label class="form-label">Alcohol units / week</label>
+  <input name="alcohol_consumption" type="number" min="0" max="50" step="1"
+         class="form-control" required>
+</div>
+
+  <div class="col-12">
+    <button class="btn btn-success">Recommend Workout</button>
+  </div>
+</form>
+
+<p class="text-muted small mt-4">
+  🤖 Powered by a Random-Forest model trained on lifestyle data.<br>
+  Recommendations are for fitness guidance only.
+</p>
+{% endblock %}

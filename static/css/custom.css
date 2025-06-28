@@ -1,0 +1,5 @@
+body { font-family: system-ui, sans-serif; }
+h1,h2 { font-weight: 700; }
+.bg-success { background-color:#198754!important; }     /* Bootstrap green */
+.btn-success { background-color:#198754;border:none; }
+.btn-warning { background-color:#ffc107;border:none;color:#212529; }

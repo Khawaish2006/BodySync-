@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-4">Calorie Burn Estimator</h2>
+{% if result is not none %}
+  <div class="alert alert-success fs-4">
+    Estimated calories burned: <strong>{{ result }} kcal</strong>
+  </div>
+{% endif %}
+<form method="POST" class="row g-3">
+  <div class="col-md-4">
+    <label class="form-label">Age (years)</label>
+    <input name="age" type="number" step="1" class="form-control" required>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Weight (kg)</label>
+    <input name="weight" type="number" step="0.1" class="form-control" required>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Height (cm)</label>
+    <input name="height" type="number" step="0.1" class="form-control" required>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Heart-Rate (bpm)</label>
+    <input name="heart_rate" type="number" step="1" class="form-control" required>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Duration (min)</label>
+    <input name="duration" type="number" step="1" class="form-control" required>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-success">Estimate</button>
+  </div>
+</form>
+{% endblock %}

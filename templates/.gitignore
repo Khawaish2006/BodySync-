@@ -1,0 +1,29 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore model files
+*.pkl
+models/
+*.joblib
+
+# Raw data
+*.csv
+
+# Ignore virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Flask session and logs
+instance/
+*.log
