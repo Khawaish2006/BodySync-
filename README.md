@@ -21,7 +21,9 @@ All models are trained on **open datasets** (Kaggle & NHANES), persisted via Pic
 ## 🖼️ Live Screenshot
 
 ![landing page](https://github.com/Khawaish2006/BodySync-/blob/main/Screenshot%202025-06-28%20134447.png)
-
+![landing page](https://github.com/Khawaish2006/BodySyncPlus/blob/main/Screenshot%202025-07-12%20233250.png)
+![landing page](https://github.com/Khawaish2006/BodySyncPlus/blob/main/Screenshot%202025-07-12%20233235.png)
+![landing page](https://github.com/Khawaish2006/BodySyncPlus/blob/main/Screenshot%202025-07-12%20233136.png)
 
 
 ---
